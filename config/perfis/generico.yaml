@@ -1,0 +1,18 @@
+# Modelo comentado para novas origens (CSV pt-BR).
+# Copie, renomeie e ajuste os nomes de colunas da sua extração.
+nome: generico
+leitura:
+  separador: ";"
+  encoding: "utf-8"
+  decimal: ","
+  milhar: "."
+colunas:
+  exercicio: "exercicio"
+  numero_empenho: "numero_empenho"
+  data_emissao: "data_emissao"
+  valor_empenhado: "valor_empenhado"
+  gnd: "gnd"
+  elemento: "elemento"
+  modalidade_aplicacao: "modalidade_aplicacao"
+  favorecido: "favorecido"
+  # opcionais: id_favorecido, numero_documento, modalidade_empenho, unidade, valor_liquidado, valor_pago

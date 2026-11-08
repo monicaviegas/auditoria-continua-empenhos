@@ -1,0 +1,16 @@
+[project]
+name = "auditoria-continua-empenhos-trilhas"
+version = "1.0.0"
+description = "Protótipo de painel que aplica o protocolo de trilhas de Auditoria Contínua a qualquer base de empenhos"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 160
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "W"]

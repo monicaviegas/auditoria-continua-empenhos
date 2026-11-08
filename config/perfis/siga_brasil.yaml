@@ -1,0 +1,33 @@
+# Perfil de entrada: extração do SIGA Brasil (relatório com cabeçalho após linhas de título).
+# canônico: nome da coluna na origem
+nome: siga_brasil
+leitura:
+  separador: ";"
+  encoding: "utf-8"
+  decimal: ","
+  milhar: "."
+  # Excel: a linha de cabeçalho é localizada automaticamente (primeira linha que contém as colunas mapeadas)
+colunas:
+  exercicio: "Ano"
+  numero_empenho: "Empenho"
+  data_emissao: "Data Emissão Empenho"
+  valor_empenhado: "Empenhado"
+  valor_liquidado: "Liquidado"
+  valor_pago: "Pago"
+  gnd: "GND (Cod/Abrev)"
+  elemento: "Elemento Despesa (Cod/Desc)"
+  favorecido: "Favorecido"
+  unidade: "UO (Cod/Desc)"
+# Campos derivados deterministicamente de outra coluna (nunca por suposição).
+# O código da natureza da despesa no subelemento tem 8 dígitos: c g mm ee ss
+# (categoria, GND, modalidade de aplicação, elemento, subelemento).
+derivacoes:
+  modalidade_aplicacao:
+    coluna: "Sub-elemento Despesa (Cod/Desc)"
+    inicio: 2        # posição (base 0) no código numérico
+    fim: 4
+    conferir:        # consistência do código com colunas já mapeadas
+      gnd: [1, 2]
+      elemento: [4, 6]
+# Textos que a origem usa no lugar de valor ausente (tratados como ausentes em todos os campos mapeados)
+valores_ausentes: ["NÃO APLICÁVEL", "NAO APLICAVEL", "SEM INFORMAÇÃO", "SEM INFORMACAO", "-9", "-"]

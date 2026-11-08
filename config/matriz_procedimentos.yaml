@@ -1,0 +1,44 @@
+# Matriz de procedimentos por trilha: o que verificar nos registros sinalizados.
+# Fonte única para o painel e para o Quadro da matriz no Cap. 4. Revisar com auditores antes do uso operacional.
+- trilha: Fornecedores
+  procedimento: T3 – valores atípicos
+  questao: O valor empenhado é compatível com o objeto e com contratações semelhantes?
+  criterio: Lei nº 14.133/2021, art. 23 (valor compatível com o de mercado); IN SEGES/ME nº 65/2021 (pesquisa de preços)
+  informacoes: Nota de empenho, processo de contratação, contrato e aditivos, pesquisa de preços
+  verificacao: Confirmar objeto, quantidade e classificação da despesa; comparar o valor com o Painel de Preços e com contratações similares
+  achados: Sobrepreço; erro de registro ou de classificação; aditivo sem cobertura
+- trilha: Fornecedores
+  procedimento: T7 – concentração
+  questao: A concentração em poucos fornecedores decorre de competição efetiva?
+  criterio: Lei nº 14.133/2021 (competitividade; contratação direta, arts. 72 a 75); Lei nº 12.846/2013 (CEIS/CNEP)
+  informacoes: Processos de contratação dos maiores fornecedores, modalidade, número de participantes; consulta ao CEIS/CNEP
+  verificacao: Verificar modalidade e participação nas contratações do fornecedor dominante; consultar impedimentos e sanções
+  achados: Contratações diretas reiteradas; baixa competitividade; fornecedor impedido ou sancionado
+- trilha: Pessoal
+  procedimento: T8 – variação por rubrica
+  questao: A variação anual da rubrica tem fundamento legal e documental?
+  criterio: Lei nº 4.320/1964, art. 37 (despesas de exercícios anteriores); Lei nº 8.745/1993 (contratação temporária); Lei nº 8.112/1990, art. 93 (cessão com ressarcimento)
+  informacoes: Processos de reconhecimento de dívida, fichas financeiras da rubrica, atos de contratação e de cessão
+  verificacao: Identificar os processos que explicam a variação; conferir reconhecimento da dívida pela autoridade competente e o cálculo dos valores
+  achados: Reconhecimento de dívida sem fundamentação; pagamento retroativo indevido; contratação fora das hipóteses legais
+- trilha: Pagamentos a pessoas
+  procedimento: T9 – acúmulo por beneficiário
+  questao: O valor acumulado pelo beneficiário na rubrica é compatível com os afastamentos e serviços comprovados?
+  criterio: Decreto nº 5.992/2006 (diárias; uso obrigatório do SCDP, art. 12-A); Lei nº 8.216/1991, art. 16 (indenização de campo, vedada a acumulação com diárias)
+  informacoes: Propostas e prestações de contas de viagem no SCDP, registros de frequência, contratos de serviço de pessoa física
+  verificacao: Confrontar períodos pagos com afastamentos e frequência; verificar sobreposição de diárias e acumulação com indenização de campo
+  achados: Diárias em períodos sobrepostos; acumulação vedada; pagamento sem comprovação do serviço ou da viagem
+- trilha: Pagamentos a pessoas
+  procedimento: T9 – pagamentos agregados
+  questao: É possível identificar o beneficiário final dos pagamentos registrados em nome de unidades?
+  criterio: Lei nº 4.320/1964, art. 63 (a liquidação apura a quem se deve pagar)
+  informacoes: Relação nominal dos beneficiários de cada pagamento em lote
+  verificacao: Reconciliar o valor do lote com a soma dos pagamentos individuais
+  achados: Falta de rastreabilidade do beneficiário; divergência entre lote e beneficiários
+- trilha: Transversal
+  procedimento: T5 – concentração temporal
+  questao: Os empenhos de fim de exercício foram liquidados e correspondem a necessidades do exercício?
+  criterio: Lei nº 4.320/1964, art. 36 (restos a pagar)
+  informacoes: Empenhos de dezembro de maior valor, liquidação e cancelamento no exercício seguinte
+  verificacao: Verificar se os empenhos foram liquidados ou cancelados e se o objeto foi entregue
+  achados: Empenho sem lastro em necessidade do exercício; inscrição em restos a pagar sem execução

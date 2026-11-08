@@ -1,0 +1,30 @@
+# Parâmetros do protocolo (Tabela 1 do Cap. 4).
+t2:
+  deflacionar: false                 # sem série IPCA versionada
+  # --- Trilha de fornecedores (U_fornecedores): aquisições e contratações diretas
+  gnd_excluidos: [1, 2, 6]           # pessoal e dívida
+  elementos_nao_fornecedor: ["41", "42", "43", "45", "47", "48", "91", "93"]  # contribuições, auxílios, subvenções, equalização, tributos, auxílios a PF pagos via agente, sentenças, indenizações e restituições
+  elementos_pessoal_odc: ["46", "49"]  # auxílio-alimentação e auxílio-transporte (pessoal em sentido amplo, pagos em folha)
+  elementos_pagamento_pessoa: ["08", "14", "15", "18", "20", "36", "95"]  # benefícios, diárias, auxílios e serviços de pessoa física
+  modalidades_incluidas: ["90", "91"]  # aplicação direta
+  elementos_transferencia_fallback: ["41", "42", "43"]
+  # --- Trilha de pessoal (U_pessoal): GND 1 (exceto sentenças) + elementos_pessoal_odc
+  elementos_excluidos_pessoal: ["91"]
+  regra_empenho_distinto: "primeira_ocorrencia_por_data"
+t3:
+  estrato_campos: [gnd, elemento, exercicio]
+  min_grupo: 30
+  limiar: 3.5
+  cauda_priorizacao: superior
+t4:
+  valor_minimo: 10
+t7:
+  top_n: 10
+t8:
+  razao_limiar: 1.5                  # rubrica-exercício com valor >= 1,5 × a mediana dos demais exercícios da rubrica
+  min_exercicios: 3                  # a rubrica precisa ter valor em pelo menos 3 exercícios
+t9:
+  min_grupo: 30                      # favorecidos por estrato (elemento × exercício)
+  limiar: 3.5                        # escore robusto do valor acumulado por favorecido
+  # favorecido cujo nome indica unidade/órgão (pagamento em lote), e não pessoa: separado e não pontuado
+  padrao_favorecido_agregado: 'PAGAMENTO|PAGTO|PRESTC|SALARIO|CODIGO|SERVICO|EMBAIXADA|SECRETARIA|SECRET\.|CONSELHO|MINIST|COORD|DIVIS|DIV\.|FOLHA|SUPERINT|FUNDA|INSTITUTO|UNIVERSIDADE|CENTRO|EMPRESA|COMPANHIA|BANCO|CAIXA|LTDA|S/A|S\.A\.|CONTRATADOS|BOLSA|BOLSISTA|ESTAGIARIO|DIARIAS|COLABORADOR|DIVERSOS|SERVIDORES|/'
